@@ -1,0 +1,232 @@
+/* ===== Variables ===== */
+:root {
+  --bg-color: #0e0f11;
+  --container-bg: #1a1c1f;
+  --text-color: #f5f5f5;
+  --subtext-color: #a1a1aa;
+  --accent-color: #4f46e5;
+  --hover-color: #6366f1;
+  --border-color: #2e2e32;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  width: 100%;
+  padding: 60px 5%;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--container-bg);
+  padding: 20px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+.socials a {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.socials a:hover {
+  color: var(--accent-color);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  width: 100%;
+  background: linear-gradient(to right, #1e3a8a, #4f46e5);
+  color: #fff;
+  text-align: center;
+  padding: 100px 5%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #e0e0e0;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #1e1e1e;
+  padding: 12px 25px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.hero .btn:hover {
+  background: var(--container-bg);
+  color: #fff;
+}
+
+/* ===== About Section ===== */
+.about p {
+  font-size: 1.1rem;
+  color: var(--subtext-color);
+  line-height: 1.6;
+}
+
+/* ===== Skills Section ===== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  background: var(--container-bg);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  transition: background var(--transition);
+}
+
+.skills-list li:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* ===== Contact Section ===== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  background: var(--container-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.contact button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.contact button:hover {
+  background: var(--hover-color);
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--container-bg);
+  color: var(--subtext-color);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero span {
+    font-size: 1.2rem;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact button {
+    width: 100%;
+  }
+}
