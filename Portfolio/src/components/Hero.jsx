@@ -12,7 +12,7 @@ const Hero = () => {
         repeat={Infinity}
       />
       <p>I build web apps that are fast and beautiful.</p>
-      <a href="/Portfolio/GOLURESUME.pdf" download className="btn">Download Resume</a>
+      <a href="/GOLURESUME.pdf" download className="btn">Download Resume</a>
 
     </section>
   );

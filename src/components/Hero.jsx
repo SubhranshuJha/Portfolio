@@ -11,8 +11,9 @@ const Hero = () => {
         speed={50}
         repeat={Infinity}
       />
-      <p>I build web apps that are fast and beautiful.</p>
-      <a href="./CV.pdf" download className="btn">Download Resume</a>
+      <p>I build web apps that are fast and beautiful.</p><p>I build web apps that are fast and beautiful.</p>
+      <a href="/GOLURESUME.pdf" download className="btn">Download Resume</a>
+
     </section>
   );
 };
